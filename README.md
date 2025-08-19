@@ -7,3 +7,6 @@ This repository contains my personal practice code and examples to strengthen my
 
 ### 1. RAII(Resource Acquisition Is Initialization)
 Simple examples demonstrating RAII mechanism.
+
+### 2. Smart Pointers
+Simple examples demonstrating smart pointers usage.
