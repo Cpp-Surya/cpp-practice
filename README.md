@@ -10,3 +10,6 @@ Simple examples demonstrating RAII mechanism.
 
 ### 2. Smart Pointers
 Simple examples demonstrating smart pointers usage.
+
+### 3. Move semantics
+Simple examples demonstrating std::move function.
