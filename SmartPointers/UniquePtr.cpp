@@ -3,10 +3,10 @@ Smart pointers are wrappers over a raw pointer that automatically manages memory
 Types of smart pointers
 1. unique pointer: only one pointer can access object at a time.
 2. shared pointer: multiple pointers can access and modify object, to track reference count is maintained.
-3. weak pointer: 
+3. weak pointer: this pointer takes reference to shared pointer except it doesnt maintain a reference count. It should be converted to shared pointer in order to access the referenced object.
 */
 
-//A simple c++ program to demonstrate unique pointers usage.
+//A simple c++ program to demonstrate unique pointer usage.
 
 #include <memory>
 #include <iostream>
@@ -36,6 +36,15 @@ class Test{
 
 void modifyvalue(std::unique_ptr<Test>& t){
     t->set_value(97);
+}
+
+std::unique_ptr<Test> get_unq_ptr(){
+    return std::make_unique<Test>(123);
+}
+
+std::unique_ptr<Test> get_unq_ptr2(){
+    std::unique_ptr<Test> p = std::make_unique<Test>(999);
+    return p;
 }
 
 int main(){
@@ -73,14 +82,18 @@ int main(){
         std::cout<<"t2 is null"<<std::endl;
     delete tmp;
     
-    //reset() deletes the currently managed object.
+    //reset(raw pointer) deletes the currently managed object and takes ownership of new object
     std::unique_ptr<Test> reset_test_ptr = std::make_unique<Test>(75);
+    std::cout<<"Before reset ptr val: "<<reset_test_ptr->get_value()<<std::endl;
+    reset_test_ptr.reset(new Test(777));
+    std::cout<<"After reset ptr val: "<<reset_test_ptr->get_value()<<std::endl;
+    //reset() deletes the currently managed object.
     if(reset_test_ptr != nullptr)
         std::cout<<"before reset: pointer is not null"<<std::endl;
     reset_test_ptr.reset();
     if(reset_test_ptr == nullptr)
         std::cout<<"After reset: pointer is null"<<std::endl;
-    
+
     //swap() swaps pointers
     std::unique_ptr<Test> ptr1 = std::make_unique<Test>(13);
     std::unique_ptr<Test> ptr2 = std::make_unique<Test>(66);
@@ -94,5 +107,11 @@ int main(){
     std::unique_ptr<Test> t = std::make_unique<Test>(7);
     modifyvalue(t);
     std::cout<<t->get_value()<<std::endl;
+
+    //unique pointer as return value
+    auto unq_ptr = get_unq_ptr();
+    std::cout<<"return val: "<<unq_ptr->get_value()<<std::endl;
+    std::unique_ptr<Test> unq_ptr_2 = get_unq_ptr2();
+    std::cout<<"return val: "<<unq_ptr_2->get_value()<<std::endl;
     return 0;
 }

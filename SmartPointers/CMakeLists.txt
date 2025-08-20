@@ -13,6 +13,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #Create executable
 add_executable(UniquePtr UniquePtr.cpp)
+add_executable(SharedPtr SharedPtr.cpp)
+add_executable(WeakPtr WeakPtr.cpp)
 
 #Link any additional libraries here if needed
 #target_link_libraries(StringToDataConverter aditional_library)
