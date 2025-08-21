@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 #Create executable
-add_executable(MoveSemantics MoveSemantics.cpp)
+add_executable(main main.cpp)
 
 #Link any additional libraries here if needed
 #target_link_libraries(StringToDataConverter aditional_library)

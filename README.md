@@ -13,3 +13,6 @@ Simple examples demonstrating smart pointers usage.
 
 ### 3. Move semantics
 Simple examples demonstrating std::move function.
+
+### 4. Lambda Expressions
+Simple examples demonstrating lambda expressions.
