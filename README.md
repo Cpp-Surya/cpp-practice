@@ -16,3 +16,6 @@ Simple examples demonstrating std::move function.
 
 ### 4. Lambda Expressions
 Simple examples demonstrating lambda expressions.
+
+### 5. Threads
+Simple examples demonstrating Thread features.
