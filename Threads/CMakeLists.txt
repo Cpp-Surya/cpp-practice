@@ -10,6 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #Add source files
 #file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+# Add debug flags
+set(CMAKE_BUILD_TYPE Debug)
 
 #Create executable
 add_executable(ThreadBasics ThreadBasics.cpp)
