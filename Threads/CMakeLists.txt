@@ -13,6 +13,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #Create executable
 add_executable(ThreadBasics ThreadBasics.cpp)
-
+add_executable(ThreadNativeHandle ThreadNativeHandle.cpp)
 #Link any additional libraries here if needed
 #target_link_libraries(StringToDataConverter aditional_library)

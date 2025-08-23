@@ -18,4 +18,7 @@ printf "*******************\n"
 printf "Program Started\n"
 ./ThreadBasics
 printf "Program Ended\n"
+printf "Program Started\n"
+./ThreadNativeHandle
+printf "Program Ended\n"
 printf "*******************\n"
