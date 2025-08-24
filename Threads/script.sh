@@ -23,3 +23,19 @@ printf "Program Started\n"
 ./ThreadNativeHandle
 printf "Program Ended\n"
 printf "*******************\n"
+printf "Program Started\n"
+./ThreadsClass
+printf "Program Ended\n"
+printf "*******************\n"
+printf "Program Started\n"
+./ThreadLockGuard
+printf "Program Ended\n"
+printf "*******************\n"
+printf "Program Started\n"
+./ThreadUniqueLock
+printf "Program Ended\n"
+printf "*******************\n"
+printf "Program Started\n"
+./ThreadAtomics
+printf "Program Ended\n"
+printf "*******************\n"

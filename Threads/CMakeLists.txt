@@ -16,5 +16,9 @@ set(CMAKE_BUILD_TYPE Debug)
 #Create executable
 add_executable(ThreadBasics ThreadBasics.cpp)
 add_executable(ThreadNativeHandle ThreadNativeHandle.cpp)
+add_executable(ThreadsClass ThreadsClass.cpp)
+add_executable(ThreadLockGuard ThreadLockGuard.cpp)
+add_executable(ThreadUniqueLock ThreadUniqueLock.cpp)
+add_executable(ThreadAtomics ThreadAtomics.cpp)
 #Link any additional libraries here if needed
 #target_link_libraries(StringToDataConverter aditional_library)
