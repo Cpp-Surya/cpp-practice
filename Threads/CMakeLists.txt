@@ -20,5 +20,6 @@ add_executable(ThreadsClass ThreadsClass.cpp)
 add_executable(ThreadLockGuard ThreadLockGuard.cpp)
 add_executable(ThreadUniqueLock ThreadUniqueLock.cpp)
 add_executable(ThreadAtomics ThreadAtomics.cpp)
+add_executable(ThreadSharedLock ThreadSharedLock.cpp)
 #Link any additional libraries here if needed
 #target_link_libraries(StringToDataConverter aditional_library)
