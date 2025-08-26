@@ -43,3 +43,7 @@ printf "Program Started\n"
 ./ThreadSharedLock
 printf "Program Ended\n"
 printf "*******************\n"
+printf "Program Started\n"
+./ThreadPool
+printf "Program Ended\n"
+printf "*******************\n"
