@@ -9,6 +9,7 @@ Key Socket Functions:
 - bind(): Associate the socket with a specific IP address and port
 - listen(): Set the socket to listen for incoming connections
 - accept(): Accept an incoming connection request
+- conncet(): Connect to server's ip address and port
 - recv(): Receive data from a connected socket
 - send(): Send data to a connected socket
 - close(): Close the socket connection
