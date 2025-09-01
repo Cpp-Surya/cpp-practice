@@ -22,6 +22,13 @@ Key Socket Functions:
 #include <unistd.h>
 #include <string.h>
 
+struct ComplexData{
+    int x;
+    float y;
+    bool z;
+    ComplexData(const int& i,const float& j,const bool& k):x(i),y(j),z(k){}
+};
+
 int main(){
     // create a socket
     int server_socket = socket(AF_INET,SOCK_STREAM,0);
@@ -69,9 +76,22 @@ int main(){
     char buffer[1024] = {0};
     recv(client_socket,buffer,1024,0);
     std::cout<<"Client says: "<<buffer<<std::endl;
-
     const char* message = "Hello from server!";
     send(client_socket,message,strlen(message),0);
+
+    //Sending and receiving standard datatypes
+    int receive_value{0};
+    recv(client_socket,&receive_value,sizeof(int),0);
+    std::cout<<"Server Received: "<<receive_value<<std::endl;
+    float sent_value{99.65};
+    send(client_socket,&sent_value,sizeof(float),0);
+    
+    //Sending and receiving User defined datatypes
+    ComplexData d1{0,0,false};
+    recv(client_socket,&d1,sizeof(ComplexData),0);
+    std::cout<<"Server Received: x-> "<<d1.x<<", y-> "<<d1.y<<", z-> "<<d1.z<<std::endl;
+    ComplexData d2{123,87.7,true};
+    send(client_socket,&d2,sizeof(ComplexData),0);
 
     // Close the sockets
     close(client_socket);
