@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 3.10)
 project(MoveSemantics)
 
 #Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+message(STATUS "C++ Standard set to: ${CMAKE_CXX_STANDARD}")
 
 #Include directory for header files
 #include_directories(${PROJECT_SOURCE_DIR}/inc)
