@@ -25,6 +25,9 @@ Released in 2011 -> The big shift from "old C++" to "modern style."<br>
 * **nullptr**<br>
     Replaces NULL with a safer type.<br>
 
+* **Type-Traits**<br>
+    Checks about types at compile-time and allows us to manipulate them.
+
 ## C++14(Small improvements)
 
 Smaller update focused on making C++11 features even better.<br>
